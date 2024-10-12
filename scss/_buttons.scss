@@ -1,0 +1,46 @@
+@import 'variables';
+
+/* Стили для кнопки "Смотреть все отзывы" */
+.reviews-button-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+  margin-top: 24px;
+margin-bottom: 24px;
+}
+.btn-primary {
+  background-color: $primary-color;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: $font-size-base;
+  color: #fff;
+  height: 52px;
+  width: 437px; 
+
+  @media (max-width: 768px) {
+    width: 334px; 
+  }
+}
+.mobile-buy-button {
+  display: none !important;
+}
+
+/* Оригинальная кнопка "Купить квест" (на десктопе) */
+.buy-button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  /* Показываем дублированную кнопку на мобильной версии */
+  .mobile-buy-button {
+    display: flex !important; 
+    width: 100%;
+    max-width: 334px;
+    margin-bottom: 24px;
+  }
+
+}

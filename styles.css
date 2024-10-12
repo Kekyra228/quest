@@ -1,0 +1,385 @@
+@charset "UTF-8";
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #424242;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 24px;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 130%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-color: #FFFFFF;
+  margin-bottom: 24px;
+}
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .header {
+    text-align: center;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 34px;
+}
+@media (max-width: 768px) {
+  .navbar-nav {
+    display: none;
+  }
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.text-image-wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 831px;
+  background: url("images/amur.png") no-repeat right;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-size: contain;
+}
+@media (max-width: 768px) {
+  .text-image-wrapper {
+    background-size: contain;
+    background-position: top;
+    padding: 0;
+  }
+}
+.text-image-wrapper .text-content {
+  z-index: 2;
+  flex: 2;
+  padding-right: 20px;
+  background: linear-gradient(to right, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 0) 100%);
+  padding: 24px;
+  border-radius: 7px;
+}
+@media (max-width: 768px) {
+  .text-image-wrapper .text-content {
+    background: none;
+    padding: 10px;
+    text-align: center;
+    margin-top: 250px;
+  }
+}
+.text-image-wrapper .text-content .quest-title {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 19px;
+  color: #424242;
+}
+@media (max-width: 768px) {
+  .text-image-wrapper .text-content .quest-title {
+    font-size: 28px;
+  }
+}
+.text-image-wrapper .text-content .tags {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .text-image-wrapper .text-content .tags {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+.text-image-wrapper .text-content .tags .badge {
+  background-color: rgba(28, 28, 28, 0.0509803922);
+  padding: 5px 15px;
+  border-radius: 3px;
+  color: #424242;
+}
+.text-image-wrapper .text-content .difficulty {
+  background-color: rgba(28, 28, 28, 0.0509803922);
+  padding: 5px 15px;
+  border-radius: 3px;
+  color: #424242;
+  width: 133px;
+  flex-wrap: nowrap;
+}
+.text-image-wrapper .text-content .description {
+  line-height: 1.6;
+  max-width: 297px;
+}
+@media (max-width: 768px) {
+  .text-image-wrapper .text-content .description {
+    font-size: 0.9rem;
+  }
+}
+
+.payment-card {
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 261px;
+  max-height: 229px;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .payment-card {
+    display: none;
+  }
+}
+.payment-card .payment-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.payment-card .payment-title {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.payment-card .payment-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.payment-card .foreign-payment {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.payment-card .foreign-payment a {
+  color: #F77833;
+  text-decoration: underline;
+}
+.payment-card .buy-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F77833;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reviews {
+  margin-top: 40px;
+  width: 100%;
+}
+.reviews .reviews-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.reviews .reviews-title .badge {
+  color: #424242;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+.reviews .reviews-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.reviews .reviews-list .review-card {
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .reviews .reviews-list .review-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+@media (min-width: 992px) {
+  .reviews .reviews-list .review-card {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+  }
+}
+.reviews .reviews-list .review-card .review-date {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+.reviews .reviews-list .review-card .review-author {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.reviews .reviews-list .review-card .review-rating {
+  margin-bottom: 10px;
+}
+.reviews .reviews-list .review-card .review-rating .star {
+  color: #ffcc00;
+  font-size: 19px;
+}
+.reviews .reviews-list .review-card .review-title {
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.reviews .reviews-list .review-card .review-text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.navbar {
+  padding: 10px 20px;
+}
+.navbar .navbar-toggler {
+  border: none;
+  padding: 5px;
+}
+.navbar .navbar-toggler-icon {
+  width: 30px;
+  height: 30px;
+}
+.navbar .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navbar .nav-item .nav-link {
+  font-size: 10px;
+  color: #424242;
+}
+@media (max-width: 768px) {
+  .navbar .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  .navbar .navbar-toggler {
+    margin-right: auto;
+  }
+  .navbar .navbar-brand {
+    margin: 0 auto;
+  }
+  .navbar .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .navbar .nav-link {
+    text-align: center;
+  }
+}
+
+/* Стили для мобильной шапки */
+.navbar-mobile {
+  display: none; /* Скрываем по умолчанию */
+  width: 100%;
+}
+.navbar-mobile .mobile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.navbar-mobile .mobile-item {
+  flex: 1;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .navbar-mobile {
+    display: flex;
+  }
+}
+/* Стили для кнопки "Смотреть все отзывы" */
+.reviews-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.btn-primary {
+  background-color: #F77833;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  height: 52px;
+  width: 437px;
+}
+@media (max-width: 768px) {
+  .btn-primary {
+    width: 334px;
+  }
+}
+
+.mobile-buy-button {
+  display: none !important;
+}
+
+/* Оригинальная кнопка "Купить квест" (на десктопе) */
+.buy-button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  /* Показываем дублированную кнопку на мобильной версии */
+  .mobile-buy-button {
+    display: flex !important;
+    width: 100%;
+    max-width: 334px;
+    margin-bottom: 24px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
